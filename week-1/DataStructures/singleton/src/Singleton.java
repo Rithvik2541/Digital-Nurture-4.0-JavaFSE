@@ -47,7 +47,6 @@ public class Singleton {
         Logger c = Logger.getInstance();
         System.out.println("\nStill same? " + (a == c));
 
-        System.out.println("\n--- Analysis ---");
         System.out.println("1) Private ctor → no outside instantiation.");
         System.out.println("2) Double-checked locking → thread-safe.");
         System.out.println("3) Only one \"Logger initialized\" printed → singleton holds.");
