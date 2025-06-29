@@ -1,7 +1,4 @@
-
--- PL/SQL Stored Procedures Exercises
-
--- Scenario 1: Process monthly interest for savings accounts
+-- 1: Process monthly interest for savings accounts
 CREATE OR REPLACE PROCEDURE ProcessMonthlyInterest IS
 BEGIN
     FOR rec IN (SELECT account_id, balance FROM accounts WHERE account_type = 'SAVINGS') LOOP
@@ -13,7 +10,7 @@ BEGIN
 END;
 /
 
--- Scenario 2: Update employee bonus based on department and bonus percentage
+--  2: Update employee bonus based on department and bonus percentage
 CREATE OR REPLACE PROCEDURE UpdateEmployeeBonus(dept_id IN NUMBER, bonus_percent IN NUMBER) IS
 BEGIN
     UPDATE employees
@@ -23,7 +20,7 @@ BEGIN
 END;
 /
 
--- Scenario 3: Transfer funds between accounts
+--  3: Transfer funds between accounts
 CREATE OR REPLACE PROCEDURE TransferFunds(
     from_account IN NUMBER,
     to_account IN NUMBER,
