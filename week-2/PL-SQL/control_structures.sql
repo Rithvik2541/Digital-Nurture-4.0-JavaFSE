@@ -1,7 +1,4 @@
-
--- PL/SQL Control Structures Exercises
-
--- Scenario 1: Apply 1% discount for customers aged above 60
+--  1: Apply 1% discount for customers aged above 60
 BEGIN
     FOR rec IN (SELECT customer_id, age, interest_rate FROM customers) LOOP
         IF rec.age > 60 THEN
@@ -15,7 +12,7 @@ BEGIN
 END;
 /
 
--- Scenario 2: Set IsVIP to TRUE for customers with balance > 10,000
+-- 2: Set IsVIP to TRUE for customers with balance > 10,000
 BEGIN
     FOR rec IN (SELECT customer_id, balance FROM customers) LOOP
         IF rec.balance > 10000 THEN
@@ -29,7 +26,7 @@ BEGIN
 END;
 /
 
--- Scenario 3: Print reminder for loans due in next 30 days
+-- 3: Print reminder for loans due in next 30 days
 DECLARE
     CURSOR due_loans IS
         SELECT l.loan_id, l.customer_id, c.name, l.due_date
