@@ -11,10 +11,10 @@ public class HelloController {
     private static final Logger LOGGER = LoggerFactory.getLogger(HelloController.class);
 
     @GetMapping("/hello")
-    public String sayHello() {
-        LOGGER.info("START sayHello()");
-        String message = "Hello World!!";
-        LOGGER.info("END sayHello()");
-        return message;
+    public String greet() {
+        LOGGER.info("START HI()");
+        String msg = "Namste";
+        LOGGER.info("END Bye()");
+        return msg;
     }
 }
